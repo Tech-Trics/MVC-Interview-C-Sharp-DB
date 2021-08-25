@@ -5,8 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace MVC_Interview_C_Sharp.ExampleClasses
-{
-
+{   
     public class MediaPlayer
     {
         public MediaPlayer()
