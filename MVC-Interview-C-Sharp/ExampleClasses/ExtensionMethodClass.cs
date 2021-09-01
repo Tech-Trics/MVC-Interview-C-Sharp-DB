@@ -5,14 +5,38 @@ using System.Threading.Tasks;
 
 namespace MVC_Interview_C_Sharp.ExampleClasses
 {
+    public class StringDimesions
+    {
+        public string Height { get; set;}
+    }
+
+     public class IntDimesions
+     {
+        public int Height { get; set;}
+     }
+
+    public class MappingClass
+    {
+        private ConversionClass ConversionClass { get; set;}
+
+        public MappingClass ()
+	    {
+            ConversionClass = new ConversionClass();
+	    }
+
+        public IntDimesions MapToIntDimesions(StringDimesions stringDimesions)
+        {
+            // Instead of ConversionClass.ToInt(stringDimesions.Height)
+            // switch to exampleA.ToInt()
+            return new IntDimesions
+            {
+                Height = ConversionClass.ToInt(stringDimesions.Height)
+            }
+        }
+    }
+
     public class ExtensionMethodClass 
     {
-        public void Test()
-        {
-            var testVal = "45";
-            var result = int.Parse(testVal);
-
-            //if you wanted to say testVal.ToInt() instead of int.Parse(testVal) how could you do that?
-        }
+        //implement .ToInt() here
     }
 }
