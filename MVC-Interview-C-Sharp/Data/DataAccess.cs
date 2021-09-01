@@ -11,12 +11,6 @@ namespace MVC_Interview_C_Sharp.Data
 {
     public class DataAccess
     {
-        //What does CRUD stand for?
-
-        //If you needed to implement similar methods for other tables in the DB how could you do it? 
-
-        //Implement for SalesOrderHeader
-
         public DataAccess()
         {
                 
