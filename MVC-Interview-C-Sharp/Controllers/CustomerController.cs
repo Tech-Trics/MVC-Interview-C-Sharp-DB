@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MVC_Interview_C_Sharp.Data;
+using MVC_Interview_C_Sharp.Models.DataModels;
 
 namespace MVC_Interview_C_Sharp.Controllers
 {
@@ -12,6 +13,11 @@ namespace MVC_Interview_C_Sharp.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        public IActionResult Test(Customer customer)
+        {
+            return View();        
         }
     }
 }

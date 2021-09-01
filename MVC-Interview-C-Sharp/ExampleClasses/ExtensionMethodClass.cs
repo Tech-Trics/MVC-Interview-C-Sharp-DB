@@ -31,7 +31,7 @@ namespace MVC_Interview_C_Sharp.ExampleClasses
             return new IntDimesions
             {
                 Height = ConversionClass.ToInt(stringDimesions.Height)
-            }
+            };
         }
     }
 
