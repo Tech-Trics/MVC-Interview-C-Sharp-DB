@@ -9,10 +9,12 @@ namespace MVC_Interview_C_Sharp.ExampleClasses
     {
         public void Test()
         {
+            var conversionClass = new ConversionClass();
             var testVal = "45";
-            var result = int.Parse(testVal);
+            var result = conversionClass.ToInt(testVal);
 
-            //if you wanted to say testVal.ToInt() instead of int.Parse(testVal) how could you do that?
+            //If you wanted to say testVal.ToInt() instead of conversionClass.ToInt(testVal)
+            //how could you changes the conversion class to do that?
         }
     }
 }
