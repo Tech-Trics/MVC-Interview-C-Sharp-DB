@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace MVC_Interview_C_Sharp.ExampleClasses
 {   
+
+    // Analyze the CD, DVD, and DigitalPlaylist classes. What would an interface look like for these classes?
+    // If an interface was applied, how could you refactor the Media Player class
+
     public class MediaPlayer
     {
         public MediaPlayer()
@@ -21,19 +25,19 @@ namespace MVC_Interview_C_Sharp.ExampleClasses
             }            
         }
 
-        public void PlayDVD(CD cd)
+        public void PlayDVD(DVD dvd)
         {
-            foreach (var track in cd.Tracks)
+            foreach (var track in dvd.Tracks)
             {
-                cd.PlayContent(track);
+                dvd.PlayContent(track);
             }
         }
 
-        public void PlayDigitalContent(CD cd)
+        public void PlayDigitalContent(DigitalPlaylist dig)
         {
-            foreach (var track in cd.Tracks)
+            foreach (var track in dig.Tracks)
             {
-                cd.PlayContent(track);
+                dig.PlayContent(track);
             }
         }
     }

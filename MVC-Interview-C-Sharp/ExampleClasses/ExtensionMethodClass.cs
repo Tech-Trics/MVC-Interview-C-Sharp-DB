@@ -26,11 +26,12 @@ namespace MVC_Interview_C_Sharp.ExampleClasses
 
         public IntDimesions MapToIntDimesions(StringDimesions stringDimesions)
         {
-            // Instead of ConversionClass.ToInt(stringDimesions.Height)
-            // switch to exampleA.ToInt()
+            
             return new IntDimesions
             {
                 Height = ConversionClass.ToInt(stringDimesions.Height)
+                // Instead of ConversionClass.ToInt(stringDimesions.Height)
+                // use stringDimesions.Height.ToInt() <-- Use ExtensionMethodClass below to make this line of code work
             };
         }
     }
