@@ -30,14 +30,18 @@ namespace MVC_Interview_C_Sharp.ExampleClasses
             return new IntDimesions
             {
                 Height = ConversionClass.ToInt(stringDimesions.Height)
-                // Instead of ConversionClass.ToInt(stringDimesions.Height)
-                // use stringDimesions.Height.ToInt() <-- Use ExtensionMethodClass below to make this line of code work
             };
+
+            //return new IntDimesions
+            //{
+            //    Height = stringDimesions.Height.ToInt()
+            //};
         }
     }
 
     public class ExtensionMethodClass 
     {
         //implement .ToInt() here
+
     }
 }

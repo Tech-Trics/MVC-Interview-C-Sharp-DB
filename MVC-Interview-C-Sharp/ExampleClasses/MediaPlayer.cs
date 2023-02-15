@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace MVC_Interview_C_Sharp.ExampleClasses
 {   
-
     // Analyze the CD, DVD, and DigitalPlaylist classes. What would an interface look like for these classes?
     // If an interface was applied, how could you refactor the Media Player class
 
@@ -40,9 +39,11 @@ namespace MVC_Interview_C_Sharp.ExampleClasses
                 dig.PlayContent(track);
             }
         }
+    }
 
-
-
+    public interface IMedia
+    {
+        //implement interface for CD, DVD, DigitalPlaylist here
     }
 
     public class CD

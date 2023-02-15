@@ -68,5 +68,9 @@ namespace MVC_Interview_C_Sharp.ExampleClasses
     }
 
     //Implement Interface Here
-   
+
+    //public class CollectionExample: ICollectionExample
+    //{
+
+    //}
 }
