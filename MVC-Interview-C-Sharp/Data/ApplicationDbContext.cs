@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using MVC_Interview_C_Sharp.Models.DataModels;
 
 namespace MVC_Interview_C_Sharp.Data
 {
@@ -13,5 +14,6 @@ namespace MVC_Interview_C_Sharp.Data
             : base(options)
         {
         }
+        public DbSet<MVC_Interview_C_Sharp.Models.DataModels.Customer> Customer { get; set; }
     }
 }
