@@ -5,42 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace MVC_Interview_C_Sharp.ExampleClasses
-{   
+{
     // Analyze the CD, DVD, and DigitalPlaylist classes. What would an interface look like for these classes?
-    // If an interface was applied, how could you refactor the Media Player class
-
-    public class MediaPlayer
-    {
-        public MediaPlayer()
-        {
-
-        }
-
-        public void PlayCD(CD cd)
-        {
-            foreach(var track in cd.Tracks)
-            {
-                cd.PlayContent(track);
-            }            
-        }
-
-        public void PlayDVD(DVD dvd)
-        {
-            foreach (var track in dvd.Tracks)
-            {
-                dvd.PlayContent(track);
-            }
-        }
-
-        public void PlayDigitalContent(DigitalPlaylist dig)
-        {
-            foreach (var track in dig.Tracks)
-            {
-                dig.PlayContent(track);
-            }
-        }
-    }
-
     public interface IMedia
     {
         //implement interface for CD, DVD, DigitalPlaylist here
@@ -123,6 +89,40 @@ namespace MVC_Interview_C_Sharp.ExampleClasses
             using (MemoryStream stream = new MemoryStream())
             {
                 stream.Write(track, 0, track.Length);
+            }
+        }
+    }
+
+    
+    // If an interface was applied, how could you refactor the Media Player class? Can you eliminate the thress existing methods and use a single?
+    public class MediaPlayer
+    {
+        public MediaPlayer()
+        {
+
+        }
+
+        public void PlayCD(CD cd)
+        {
+            foreach(var track in cd.Tracks)
+            {
+                cd.PlayContent(track);
+            }            
+        }
+
+        public void PlayDVD(DVD dvd)
+        {
+            foreach (var track in dvd.Tracks)
+            {
+                dvd.PlayContent(track);
+            }
+        }
+
+        public void PlayDigitalContent(DigitalPlaylist dig)
+        {
+            foreach (var track in dig.Tracks)
+            {
+                dig.PlayContent(track);
             }
         }
     }
